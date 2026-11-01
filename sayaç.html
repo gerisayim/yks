@@ -1,0 +1,213 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>MUSTAFA KEMAL NESNEL OGM + TOBB TIP</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  /* Layout: tek ekran, optik form çizgileri arasında dört büyük hane, ortada sabit */
+  :root {
+    --paper: #fbf7f6;
+    --ink: #1f1a1c;
+    --muted: #7a6a6e;
+    --form: #d23a52;      /* optik form kırmızısı */
+    --form-soft: #f3d6db;
+    --cell: #ffffff;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #141113; --ink: #f4eef0; --muted: #a8979c;
+      --form: #f0657b; --form-soft: #3a2328; --cell: #1c181a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #141113; --ink: #f4eef0; --muted: #a8979c;
+    --form: #f0657b; --form-soft: #3a2328; --cell: #1c181a;
+    color-scheme: dark;
+  }
+
+  html, body { height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--display);
+    display: grid;
+    place-items: center;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 24px;
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--form-soft) 31px 32px);
+  }
+
+  main {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    gap: clamp(20px, 4vw, 36px);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--form);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tag span + span::before { content: "•"; margin-right: 10px; color: var(--muted); }
+
+  h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(8px, 2vw, 18px);
+    width: 100%;
+  }
+  .unit {
+    background: var(--cell);
+    border: 2px solid var(--form);
+    border-radius: 6px;
+    padding: clamp(14px, 3vw, 28px) 4px clamp(10px, 2vw, 18px);
+    display: grid;
+    gap: 6px;
+    position: relative;
+    min-width: 0;
+  }
+  .unit::before {
+    /* optik formdaki kodlama baloncukları gibi küçük işaret */
+    content: "";
+    position: absolute;
+    top: 8px; left: 8px;
+    width: 8px; height: 8px;
+    border: 1.5px solid var(--form);
+    border-radius: 50%;
+  }
+  .unit:first-child::before { background: var(--form); }
+  .num {
+    font-weight: 800;
+    font-size: clamp(2.4rem, 11vw, 6.5rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+  }
+  .lbl {
+    font-family: var(--mono);
+    font-size: clamp(0.65rem, 1.6vw, 0.8rem);
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .date {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  .date b { color: var(--ink); font-weight: 600; }
+
+  .done {
+    font-weight: 800;
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: var(--form);
+    margin: 0;
+  }
+
+  button {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--muted);
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  button:hover { color: var(--form); border-color: var(--form); }
+  button:focus-visible { outline: 2px solid var(--form); outline-offset: 2px; }
+
+  @media (max-width: 420px) {
+    .unit::before { display: none; }
+  }
+</style>
+
+<main>
+  <div class="tag"><span>Allah’ın rahmeti üstünüze olsun.</span><span>Mesih size rehberlik etsin.</span><span>Bol şans.</span></div>
+  <h1>YKS 2027 İÇİN KALAN SÜRE</h1>
+
+  <div class="clock" id="clock" aria-live="off">
+    <div class="unit"><div class="num" id="d">000</div><div class="lbl">Gün</div></div>
+    <div class="unit"><div class="num" id="h">00</div><div class="lbl">Saat</div></div>
+    <div class="unit"><div class="num" id="m">00</div><div class="lbl">Dakika</div></div>
+    <div class="unit"><div class="num" id="s">00</div><div class="lbl">Saniye</div></div>
+  </div>
+  <p class="done" id="done" hidden>Sınav başladı. Başarılar!</p>
+
+  <p class="date"><b>19 Haziran 2027 Cumartesi</b> · saat 10:15</p>
+
+  <button type="button" id="fs">Tam ekran</button>
+</main>
+
+<script>
+  // 19 Haziran 2027 10:15 Türkiye saati (UTC+3)
+  const TARGET = Date.UTC(2027, 5, 19, 7, 15, 0);
+  const el = id => document.getElementById(id);
+  const pad = n => String(n).padStart(2, "0");
+
+  function tick() {
+    const diff = TARGET - Date.now();
+    if (diff <= 0) {
+      el("clock").hidden = true;
+      el("done").hidden = false;
+      document.title = "TYT başladı";
+      return false;
+    }
+    const t = Math.floor(diff / 1000);
+    const d = Math.floor(t / 86400);
+    const h = Math.floor((t % 86400) / 3600);
+    const m = Math.floor((t % 3600) / 60);
+    const s = t % 60;
+    el("d").textContent = d;
+    el("h").textContent = pad(h);
+    el("m").textContent = pad(m);
+    el("s").textContent = pad(s);
+    return true;
+  }
+
+  if (tick()) {
+    const loop = () => { if (tick()) setTimeout(loop, 1000 - (Date.now() % 1000) + 5); };
+    loop();
+  }
+
+  el("fs").addEventListener("click", async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
+    } catch (e) {
+      el("fs").textContent = "Tam ekran desteklenmiyor";
+    }
+  });
+  document.addEventListener("fullscreenchange", () => {
+    el("fs").textContent = document.fullscreenElement ? "Çık" : "Tam ekran";
+  });
+</script>
+
+</body></html>
